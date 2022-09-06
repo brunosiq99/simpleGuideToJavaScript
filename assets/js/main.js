@@ -25,7 +25,7 @@ function createNav(titleItem,idItem){
 let navItems = [];
 const navList = document.querySelector('.nav__list');
 
-fetch('http://127.0.0.1:5500/assets/html/nav.html').
+fetch('https://brunosiq99.github.io/simpleGuideToJavaScript/assets/html/nav.html').
     then((data) => data.json()).
     then((response) => {  
         response.forEach(element => {
@@ -90,7 +90,7 @@ function createSection(id,title){
 }
 
 function createContent(id, parentSection){
-    const apiUrl = `http://127.0.0.1:5500/assets/html/${id}.html`;
+    const apiUrl = `https://brunosiq99.github.io/simpleGuideToJavaScript/assets/html/${id}.html`;
     fetch(apiUrl).
         then((data) => data.json()).
         then((response) => {
@@ -105,7 +105,7 @@ function createContent(id, parentSection){
                 subjectDescription.innerHTML = subject.p;
                 const subjectCode = document.createElement('div');
                 subjectCode.className = 'subject__code';
-                subjectCode.innerHTML = `<img class='subject__img' src='http://127.0.0.1:5500/assets/img/${parentSection.id}/${subject.img}.png'>`
+                subjectCode.innerHTML = `<img class='subject__img' src='https://brunosiq99.github.io/simpleGuideToJavaScript/assets/img/${parentSection.id}/${subject.img}.png'>`
                     
                 parentSection.appendChild(divSubject);
                 divSubject.appendChild(subjectTitle); 
